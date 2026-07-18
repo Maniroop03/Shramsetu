@@ -24,7 +24,7 @@ function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-50/60 via-white to-white">
       <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-brand-200/30 blur-3xl" />
       <div className="absolute top-40 -left-24 h-80 w-80 rounded-full bg-accent-200/30 blur-3xl" />
-      <div className="section relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <div className="section relative py-16 lg:py-24">
         <div className="animate-fade-up">
           <span className="badge bg-accent-100 text-accent-700">
             <ShieldCheck className="h-3.5 w-3.5" /> {t('landing.verifiedBadge')}
@@ -50,9 +50,7 @@ function Hero() {
             <div className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent-500" /> {t('landing.jobsDone')}</div>
           </div>
         </div>
-        <div className="relative animate-fade-in">
-          <HeroIllustration />
-        </div>
+        
       </div>
     </section>
   );
