@@ -94,9 +94,6 @@ export default function Register() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label={t('register.email')} icon={Mail}>
-                <input type="email" className="input pl-10" placeholder="you@example.com" required />
-              </Field>
               <Field label={t('register.password')} icon={Lock}>
                 <input type={show ? 'text' : 'password'} className="input pl-10 pr-10" placeholder="••••••••" required />
                 <button type="button" onClick={() => setShow(!show)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
