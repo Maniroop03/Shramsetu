@@ -18,7 +18,7 @@ export default function PostJob() {
         <div className="card w-full max-w-md p-10 text-center">
           <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-accent-100 text-accent-600"><CheckCircle2 className="h-8 w-8" /></span>
           <h2 className="mt-4 text-2xl font-bold text-slate-900">Job posted successfully!</h2>
-          <p className="mt-2 text-slate-600">Workers will start sending quotes shortly.</p>
+          <p className="mt-2 text-slate-600">Labourers will start sending quotes shortly.</p>
         </div>
       </div>
     );
@@ -29,20 +29,20 @@ export default function PostJob() {
       <form onSubmit={submit} className="card space-y-5 p-6 lg:p-8">
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label className="label">Service Category</label>
+            <label className="label">Labour Work Category</label>
             <select className="input" required defaultValue="">
-              <option value="" disabled>Select category</option>
+              <option value="" disabled>Select labour work</option>
               {services.map((s) => <option key={s.id} value={s.name}>{s.name}</option>)}
             </select>
           </div>
           <div>
             <label className="label">Job Title</label>
-            <input className="input" placeholder="e.g. Ceiling fan installation" required />
+            <input className="input" placeholder="e.g. Need 3 labourers for house shifting" required />
           </div>
         </div>
         <div>
           <label className="label">Job Description</label>
-          <textarea rows={4} className="input" placeholder="Describe the work in detail..." required />
+          <textarea rows={4} className="input" placeholder="Describe the labour work, tasks and requirements..." required />
         </div>
         <div>
           <label className="label">Upload Images</label>
@@ -62,7 +62,7 @@ export default function PostJob() {
             </div>
           </div>
           <div>
-            <label className="label">Number of Workers Required</label>
+            <label className="label">Number of Labourers Required</label>
             <div className="relative">
               <Users className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input type="number" min={1} defaultValue={1} className="input pl-10" required />
@@ -81,7 +81,7 @@ export default function PostJob() {
             <label className="label">Estimated Duration</label>
             <div className="relative">
               <Clock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-              <input className="input pl-10" placeholder="e.g. 2 hours" required />
+              <input className="input pl-10" placeholder="e.g. 1 day" required />
             </div>
           </div>
         </div>
